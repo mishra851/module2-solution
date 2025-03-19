@@ -1,0 +1,94 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Common styles for all boxes */
+.box {
+    border: 1px solid black;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff9999;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Different colors for each title */
+.box1 .title {
+    background-color: #ff9999; /* light red */
+}
+
+.box2 .title {
+    background-color: #99ccff; /* light blue */
+}
+
+.box3 .title {
+    background-color: #99ff99; /* light green */
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .box {
+        width: 31.33%;
+        float: left;
+        margin-right: 3%;
+    }
+
+    .box:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        float: left;
+    }
+
+    .box1, .box2 {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .box2 {
+        margin-right: 0;
+    }
+
+    .box3 {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .box {
+        width: 100%;
+    }
+}
